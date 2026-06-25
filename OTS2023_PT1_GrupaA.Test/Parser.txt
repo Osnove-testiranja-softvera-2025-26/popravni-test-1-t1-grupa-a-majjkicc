@@ -1,0 +1,10 @@
+Fish: 0, 6, 7, 12, 13
+Bait: 0, 9, 10
+HasBoat: true, false
+Score: Bad, Average, Good
+
+IF [Fish] > 12 THEN [Score] = "Good";
+IF [Fish] > 6 AND [Bait] >= 10 AND [HasBoat] = "true" THEN [Score] = "Good";
+IF [Fish] <= 6 AND [Bait] >= 10 AND [HasBoat] = "true" THEN [Score] = "Average";
+IF [Bait] < 10 AND [Fish] <= 12 THEN [Score] = "Bad";
+IF [HasBoat] = "false" AND [Fish] <= 12 THEN [Score] = "Bad";
